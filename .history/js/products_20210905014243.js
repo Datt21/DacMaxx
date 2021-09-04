@@ -1,38 +1,45 @@
 let products = [
     {
-        name: 'Creo SL MJ20',
-        image1: './images/ERRD_Se0CRSE_dbl_Creo_SL_MJ20-il-removebg-preview.png',
-        image2: './images/ERRD_Se0CRSE_dbl_Creo_SL_MJ20-d2-il-removebg-preview.png',
-        old_price: '1200,00',
-        curr_price: '900,00',
+        name: 'JBL E55BT KEY BLACK',
+        image1: './images/JBL_E55BT_KEY_BLACK_6175_FS_x1-1605x1605px.png',
+        image2: './images/JBL_LIVE650BTNC_Product Image_Folded_Black.webp',
+        old_price: '400',
+        curr_price: '300'
     },
     {
-        name: 'Creo SL Comp MJ20',
-        image1: './images/ERRD_Se0CSLC_ga_Creo_SL_Comp_Carbon_MJ20-il-removebg-preview.png',
-        image2: './images/ERRD_Se0CSLC_ga_Creo_SL_Comp_Carbon_MJ20-d2-il-removebg-preview.png',
-        old_price: '1200,00',
-        curr_price: '900,00',
+        name: 'JBL JR 310BT',
+        image1: './images/JBL_JR 310BT_Product Image_Hero_Skyblue.png',
+        image2: './images/JBL_JR 310BT_Product Image_Detail_Skyblue.png',
+        old_price: '400',
+        curr_price: '300'
     },
     {
-        name: 'Creo DBL E5',
-        image1: './images/ERRD_Se0CSLCE5_dbl-sw-gr_Creo_SL_E5_Comp_MJ20-il-removebg-preview.png',
-        image2: './images/ERRD_Se0CSLCE5_dbl-sw-gr_Creo_SL_E5_Comp_MJ20-d02-il-removebg-preview.png',
-        old_price: '1200,00',
-        curr_price: '900,00',
+        name: 'JBL TUNE 750BTNC',
+        image1: './images/kisspng-beats-electronics-headphones-apple-beats-studio-red-headphones.png',
+        image2: './images/JBL_E55BT_KEY_RED_6063_FS_x1-1605x1605px.webp',
+        old_price: '400',
+        curr_price: '300'
     },
     {
-        name: 'Se1 CSL D2',
-        image1: './images/ERRD_Se1CSLXC_98121-32-il-removebg-preview.png',
-        image2: './images/ERRD_Se1CSLXC_98121-32-d2-il-removebg-preview.png',
-        old_price: '1200,00',
-        curr_price: '900,00',
+        name: 'JBL Horizon',
+        image1: './images/JBLHorizon_001_dvHAMaster.png',
+        image2: './images/JBLHorizon_BLK_002_dvHAMaster.webp',
+        old_price: '400',
+        curr_price: '300'
     },
     {
-        name: 'RRD SE1 MJ20',
-        image1: './images/RRD_Se1AETPE_97221-10-il-removebg-preview.png',
-        image2: './images/RRD_Se1AETPE_97221-10-d2-il-removebg-preview.png',
-        old_price: '1200,00',
-        curr_price: '900,00',
+        name: 'JBL Tune 220TWS',
+        image1: './images/JBL_TUNE220TWS_ProductImage_Pink_ChargingCaseOpen.png',
+        image2: './images/JBL_TUNE220TWS_ProductImage_Pink_Back.png',
+        old_price: '400',
+        curr_price: '300'
+    },
+    {
+        name: 'UA Project Rock',
+        image1: './images/190402_E1_FW19_EarbudsWCase_S13_0033-1_1605x1605_HERO.png',
+        image2: './images/190402_E1_FW19_EarbudsWCase_S13_0033-1_1605x1605_BACK.png',
+        old_price: '400',
+        curr_price: '300'
     },
 ]
 

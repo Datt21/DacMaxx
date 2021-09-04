@@ -215,18 +215,13 @@ function showTotals() {
     items.forEach(function(item) {
         total.push(parseFloat(item.textContent));
     });
-    // console.log(total);
+    console.log(total);
 
     const totalMoney = total.reduce(function(total, item){
         total += item;
         return total;
-    },0);
-    const finalMoney = totalMoney.toFixed(2);
+    },0)
 
-    document.getElementById('cart-total').textContent = finalMoney;
-    document.querySelector('.item-total').textContent = finalMoney;
-    // document.getElementById('item-count').textContent = total.length;
-
-    // console.log(totalMoney);
+    console.log(totalMoney);
 }
 

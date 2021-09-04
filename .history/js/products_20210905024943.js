@@ -34,6 +34,20 @@ let products = [
         old_price: '1200,00',
         curr_price: '900,00',
     },
+    {
+        name: 'RRD Se1 AETX',
+        image1: './images/RRD_Se1AETX_97221-30-il.png',
+        image2: './images/RRD_Se1AETX_97221-30-d2-il.png',
+        old_price: '1200,00',
+        curr_price: '900,00',
+    },
+    {
+        name: 'CREO SL MJ20',
+        image1: './images/RRD_Se1TSL6S_90621-60--il.png',
+        image2: './images/RRD_Se1TSL6S_90621-60-d2-il.png',
+        old_price: '1200,00',
+        curr_price: '900,00',
+    },
 ]
 
 let product_list = document.querySelector('#products')

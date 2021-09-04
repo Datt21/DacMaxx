@@ -148,7 +148,7 @@ product.forEach(e => {
                 <div class="product-card-name">${e.name}</div>
                 <div class="product-card-price">
                     <span><del>\$${e.old_price}</del></span>
-                    <div class="curr-price">${e.curr_price}</div>
+                    <div class="curr-price">\$${e.curr_price}</div>
                 </div>
            </div>
        </div>
@@ -167,6 +167,10 @@ product.forEach(e => {
             // console.log(event.target);
             if(event.target.parentElement.classList.contains('btn-cart-add')){
                 let fullPath = event.target.parentElement.parentElement.parentElement.previousElementSibling.children[0].src;
+                // let pos = fullPath.indexOf('images') + 6;
+                // let partPath = fullPath.slice(pos);
+                // console.log(fullPath);
+              
 
                 const item = {};
                 item.img = fullPath;
@@ -174,8 +178,8 @@ product.forEach(e => {
                 item.name = name;
                 let price = event.target.parentElement.parentElement.nextElementSibling.nextElementSibling.children[1]
                 .textContent;
-                // let finalPrice = price.slice(1);
-                item.price = price;
+                let finalPrice = price.slice(1);
+                item.price = finalPrice;
 
 
             const cartItem = document.createElement('div');
@@ -215,18 +219,6 @@ function showTotals() {
     items.forEach(function(item) {
         total.push(parseFloat(item.textContent));
     });
-    // console.log(total);
-
-    const totalMoney = total.reduce(function(total, item){
-        total += item;
-        return total;
-    },0);
-    const finalMoney = totalMoney.toFixed(2);
-
-    document.getElementById('cart-total').textContent = finalMoney;
-    document.querySelector('.item-total').textContent = finalMoney;
-    // document.getElementById('item-count').textContent = total.length;
-
-    // console.log(totalMoney);
+    console.log(total);
 }
 

@@ -27,13 +27,6 @@ let products = [
         old_price: '1200,00',
         curr_price: '900,00',
     },
-    {
-        name: 'RRD SE1 MJ20',
-        image1: './images/RRD_Se1AETPE_97221-10-il-removebg-preview.png',
-        image2: './images/RRD_Se1AETPE_97221-10-d2-il-removebg-preview.png',
-        old_price: '1200,00',
-        curr_price: '900,00',
-    },
 ]
 
 let product_list = document.querySelector('#products')

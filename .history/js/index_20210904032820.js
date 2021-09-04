@@ -76,49 +76,49 @@ let product = [
         image1: './images/ERRD_Se0CRSE_dbl_Creo_SL_MJ20-il-removebg-preview.png',
         image2: './images/ERRD_Se0CRSE_dbl_Creo_SL_MJ20-d2-il-removebg-preview.png',
         old_price: '1200,00',
-        curr_price: '900,00',
+        curr_price: '900',
     },
     {
         name: 'Creo SL Comp MJ20',
         image1: './images/ERRD_Se0CSLC_ga_Creo_SL_Comp_Carbon_MJ20-il-removebg-preview.png',
         image2: './images/ERRD_Se0CSLC_ga_Creo_SL_Comp_Carbon_MJ20-d2-il-removebg-preview.png',
         old_price: '1200,00',
-        curr_price: '900,00',
+        curr_price: '900',
     },
     {
         name: 'Creo DBL E5',
         image1: './images/ERRD_Se0CSLCE5_dbl-sw-gr_Creo_SL_E5_Comp_MJ20-il-removebg-preview.png',
         image2: './images/ERRD_Se0CSLCE5_dbl-sw-gr_Creo_SL_E5_Comp_MJ20-d02-il-removebg-preview.png',
         old_price: '1200,00',
-        curr_price: '900,00',
+        curr_price: '900',
     },
     {
         name: 'Se1 CSL D2',
         image1: './images/ERRD_Se1CSLXC_98121-32-il-removebg-preview.png',
         image2: './images/ERRD_Se1CSLXC_98121-32-d2-il-removebg-preview.png',
         old_price: '1200,00',
-        curr_price: '900,00',
+        curr_price: '900',
     },
     {
         name: 'RRD SE1 MJ20',
         image1: './images/RRD_Se1AETPE_97221-10-il-removebg-preview.png',
         image2: './images/RRD_Se1AETPE_97221-10-d2-il-removebg-preview.png',
         old_price: '1200,00',
-        curr_price: '900,00',
+        curr_price: '900',
     },
     {
         name: 'RRD Se1 AETX',
         image1: './images/RRD_Se1AETX_97221-30-il.png',
         image2: './images/RRD_Se1AETX_97221-30-d2-il.png',
         old_price: '1200,00',
-        curr_price: '900,00',
+        curr_price: '900',
     },
     {
         name: 'CREO SL MJ20',
         image1: './images/RRD_Se1TSL6S_90621-60--il.png',
         image2: './images/RRD_Se1TSL6S_90621-60-d2-il.png',
         old_price: '1200,00',
-        curr_price: '900,00',
+        curr_price: '900',
     },
 ]
 
@@ -148,7 +148,7 @@ product.forEach(e => {
                 <div class="product-card-name">${e.name}</div>
                 <div class="product-card-price">
                     <span><del>\$${e.old_price}</del></span>
-                    <div class="curr-price">${e.curr_price}</div>
+                    <div class="curr-price">\$${e.curr_price}</div>
                 </div>
            </div>
        </div>
@@ -167,6 +167,10 @@ product.forEach(e => {
             // console.log(event.target);
             if(event.target.parentElement.classList.contains('btn-cart-add')){
                 let fullPath = event.target.parentElement.parentElement.parentElement.previousElementSibling.children[0].src;
+                // let pos = fullPath.indexOf('images') + 6;
+                // let partPath = fullPath.slice(pos);
+                // console.log(fullPath);
+              
 
                 const item = {};
                 item.img = fullPath;
@@ -174,8 +178,8 @@ product.forEach(e => {
                 item.name = name;
                 let price = event.target.parentElement.parentElement.nextElementSibling.nextElementSibling.children[1]
                 .textContent;
-                // let finalPrice = price.slice(1);
-                item.price = price;
+                let finalPrice = price.slice(1);
+                item.price = finalPrice;
 
 
             const cartItem = document.createElement('div');
@@ -215,18 +219,6 @@ function showTotals() {
     items.forEach(function(item) {
         total.push(parseFloat(item.textContent));
     });
-    // console.log(total);
-
-    const totalMoney = total.reduce(function(total, item){
-        total += item;
-        return total;
-    },0);
-    const finalMoney = totalMoney.toFixed(2);
-
-    document.getElementById('cart-total').textContent = finalMoney;
-    document.querySelector('.item-total').textContent = finalMoney;
-    // document.getElementById('item-count').textContent = total.length;
-
-    // console.log(totalMoney);
+    console.log(total);
 }
 

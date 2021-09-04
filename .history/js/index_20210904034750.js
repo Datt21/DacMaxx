@@ -174,8 +174,8 @@ product.forEach(e => {
                 item.name = name;
                 let price = event.target.parentElement.parentElement.nextElementSibling.nextElementSibling.children[1]
                 .textContent;
-                // let finalPrice = price.slice(1);
-                item.price = price;
+                let finalPrice = price.slice(1);
+                item.price = finalPrice;
 
 
             const cartItem = document.createElement('div');
@@ -213,20 +213,15 @@ function showTotals() {
     const items = document.querySelectorAll('.curr-price');
 
     items.forEach(function(item) {
-        total.push(parseFloat(item.textContent));
+        total.push(item.textContent);
     });
     // console.log(total);
 
     const totalMoney = total.reduce(function(total, item){
         total += item;
         return total;
-    },0);
-    const finalMoney = totalMoney.toFixed(2);
+    },0)
 
-    document.getElementById('cart-total').textContent = finalMoney;
-    document.querySelector('.item-total').textContent = finalMoney;
-    // document.getElementById('item-count').textContent = total.length;
-
-    // console.log(totalMoney);
+    console.log(totalMoney);
 }
 

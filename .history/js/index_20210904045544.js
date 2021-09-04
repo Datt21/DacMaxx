@@ -221,12 +221,11 @@ function showTotals() {
         total += item;
         return total;
     },0);
-    const finalMoney = totalMoney.toFixed(2);
 
     document.getElementById('cart-total').textContent = finalMoney;
     document.querySelector('.item-total').textContent = finalMoney;
-    // document.getElementById('item-count').textContent = total.length;
+    document.getElementById('item-count').textContent = totalMoney;
 
-    // console.log(totalMoney);
+    console.log(totalMoney);
 }
 

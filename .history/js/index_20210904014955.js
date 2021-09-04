@@ -145,9 +145,13 @@ product.forEach(e => {
                            <i class='bx bxs-heart'></i>
                     </button>
                 </div>
-                <div class="product-card-name">${e.name}</div>
+
+                <div class="product-card-name">
+                    ${e.name}
+                </div>
+
                 <div class="product-card-price">
-                    <span><del>\$${e.old_price}</del></span>
+                    <span><del>${e.old_price}</del></span>
                     <div class="curr-price">${e.curr_price}</div>
                 </div>
            </div>
@@ -167,66 +171,19 @@ product.forEach(e => {
             // console.log(event.target);
             if(event.target.parentElement.classList.contains('btn-cart-add')){
                 let fullPath = event.target.parentElement.parentElement.parentElement.previousElementSibling.children[0].src;
+                let pos = fullPath.indexOf('images') + 3;
+                let partPath = fullPath.slice(pos);
+              
 
                 const item = {};
-                item.img = fullPath;
-                let name = event.target.parentElement.parentElement.nextElementSibling.textContent;
-                item.name = name;
-                let price = event.target.parentElement.parentElement.nextElementSibling.nextElementSibling.children[1]
-                .textContent;
-                // let finalPrice = price.slice(1);
-                item.price = price;
-
-
-            const cartItem = document.createElement('div');
-            cartItem.classList.add('cart-items');
-
-            cartItem.innerHTML = `
-            <img src="${item.img}" alt="">
-            <div class="cart-info">
-                <h4>${item.name}</h4>
-                <h5>${item.price}</h5>
-                <span class="remove-item">remove</span>
-            </div>
-            <div>
-               <i class='bx bx-plus-circle'></i>
-               <p class="item-amount">1</p>
-               <i class='bx bx-minus-circle'></i>
-            </div>
-            `;
-            //select cart
-            const cart = document.getElementById('cart');
-            const total = document.querySelector('.cart-footer');
-
-            cart.insertBefore(cartItem, total);
-            alert('Item added to the cart');
-            showTotals();
-                
+                item.img = `img-cart${partPath}`;
+                console.log(item.img);
             }
 
         });
     });
 
-// show totals
-function showTotals() {
-    const total = [];
-    const items = document.querySelectorAll('.curr-price');
+// })();
 
-    items.forEach(function(item) {
-        total.push(parseFloat(item.textContent));
-    });
-    // console.log(total);
-
-    const totalMoney = total.reduce(function(total, item){
-        total += item;
-        return total;
-    },0);
-    const finalMoney = totalMoney.toFixed(2);
-
-    document.getElementById('cart-total').textContent = finalMoney;
-    document.querySelector('.item-total').textContent = finalMoney;
-    // document.getElementById('item-count').textContent = total.length;
-
-    // console.log(totalMoney);
-}
-
+// let closeCartBtn = document.querySelector('.close-cart');
+// closeCartBtn.classList.add('.cart-show')
